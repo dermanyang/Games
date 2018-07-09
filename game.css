@@ -1,0 +1,405 @@
+/* CSS reset http://meyerweb.com/eric/tools/css/reset/ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* page layout */
+html, body, #root {
+    height: 100%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* animated background image */
+
+.animated-bg {
+    background: gray url(./img/bg.png) repeat 0 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    -webkit-animation: slide 20s linear infinite;
+    animation: slide 20s linear infinite;
+    position: fixed;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -400px 0; }
+}
+
+@keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -400px 0; }
+}
+
+/* animated sprites */
+
+.ghost {
+    width: 64px;
+    height: 64px;
+    background-image: url(./img/sprite.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 10;
+}
+
+.ghost-red {
+    background-position-y: 0;
+}
+
+.ghost-babyblue {
+    background-position-y: -64px;
+}
+
+.ghost-pink {
+    background-position-y: -128px;
+}
+
+.ghost-orange {
+    background-position-y: -256px;
+}
+
+.ghost-blue {
+    background-position-y: -192px;
+    background-position-x: -704px;
+    -webkit-animation: ghost-blue .5s steps(2) infinite;
+    animation: ghost-blue .5s steps(2) infinite;
+}
+
+.ghost-white {
+    background-position-y: -256px;
+    background-position-x: -704px;
+    -webkit-animation: ghost-white .5s steps(2) infinite;
+    animation: ghost-white .5s steps(2) infinite;
+}
+
+.ghost-transparent {
+    background-position-y: -256px;
+    background-position-x: 0px;
+    -webkit-animation: ghost-transparent .5s steps(4) infinite;
+    animation: ghost-transparent .5s steps(4) infinite;
+}
+
+.ghost-r {
+    background-position-x: 0px;
+    -webkit-animation: ghost-r .5s steps(2) infinite;
+    animation: ghost-r .5s steps(2) infinite;
+}
+
+.ghost-d {
+    background-position-x: calc( -64px * 2 );
+    -webkit-animation: ghost-d .5s steps(2) infinite;
+    animation: ghost-d .5s steps(2) infinite;
+}
+
+.ghost-l {
+    background-position-x: calc( -64px * 4 );
+    -webkit-animation: ghost-l .5s steps(2) infinite;
+    animation: ghost-l .5s steps(2) infinite;
+}
+
+.ghost-u {
+    background-position-x: calc( -64px * 6 );
+    -webkit-animation: ghost-u .5s steps(2) infinite;
+    animation: ghost-u .5s steps(2) infinite;
+}
+
+@-webkit-keyframes ghost-r {
+    100% {background-position-x: calc( -64px * 2 )}
+}
+
+@keyframes ghost-r {
+    100% {background-position-x: calc( -64px * 2 )}
+}
+
+@-webkit-keyframes ghost-d {
+    100% {background-position-x: calc( -64px * 4 )}
+}
+
+@keyframes ghost-d {
+    100% {background-position-x: calc( -64px * 4 )}
+}
+
+@-webkit-keyframes ghost-l {
+    100% {background-position-x: calc( -64px * 6 )}
+}
+
+@keyframes ghost-l {
+    100% {background-position-x: calc( -64px * 6 )}
+}
+
+@-webkit-keyframes ghost-u {
+    100% {background-position-x: calc( -64px * 8 )}
+}
+
+@keyframes ghost-u {
+    100% {background-position-x: calc( -64px * 8 )}
+}
+
+@-webkit-keyframes ghost-blue {
+    100% {background-position-x: calc( -64px * 9 )}
+}
+
+@keyframes ghost-blue {
+    100% {background-position-x: calc( -64px * 9 )}
+}
+
+@-webkit-keyframes ghost-white {
+    100% {background-position-x: calc( -64px * 9 )}
+}
+
+@keyframes ghost-white {
+    100% {background-position-x: calc( -64px * 9 )}
+}
+
+@-webkit-keyframes ghost-transparent {
+    100% {background-position-x: calc( -64px * 4 )}
+}
+
+@keyframes ghost-transparent {
+    100% {background-position-x: calc( -64px * 4 )}
+}
+
+/* pac-man */
+
+.hacman {
+    background-image: url(./img/sprite.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 20;
+}
+
+.hacman-move {
+    background-position-y: -320px;
+}
+
+.hacman-r {
+    background-position-x: 0px;
+    -webkit-animation: hacman-r .5s steps(3) infinite;
+    animation: hacman-r .5s steps(3) infinite;
+}
+
+.hacman-d {
+    background-position-x: calc( -64px * 3 );
+    -webkit-animation: hacman-d .5s steps(3) infinite;
+    animation: hacman-d .5s steps(3) infinite;
+}
+
+.hacman-l {
+    background-position-x: calc( -64px * 6 );
+    -webkit-animation: hacman-l .5s steps(3) infinite;
+    animation: hacman-l .5s steps(3) infinite;
+}
+
+.hacman-u {
+    background-position-x: calc( -64px * 9 );
+    -webkit-animation: hacman-u .5s steps(3) infinite;
+    animation: hacman-u .5s steps(3) infinite;
+}
+
+.hacman-die {
+    background-position-y: -384px;
+    -webkit-animation: hacman-die 1.5s steps(12) infinite;
+    animation: hacman-die 1.5s steps(12) infinite;
+}
+
+@-webkit-keyframes hacman-r {
+    100% {background-position-x: calc( -64px * 3 )}
+}
+
+@keyframes hacman-r {
+    100% {background-position-x: calc( -64px * 3 )}
+}
+
+@-webkit-keyframes hacman-d {
+    100% {background-position-x: calc( -64px * 6 )}
+}
+
+@keyframes hacman-d {
+    100% {background-position-x: calc( -64px * 6 )}
+}
+
+@-webkit-keyframes hacman-l {
+    100% {background-position-x: calc( -64px * 9 )}
+}
+
+@keyframes hacman-l {
+    100% {background-position-x: calc( -64px * 9 )}
+}
+
+@-webkit-keyframes hacman-u {
+    100% {background-position-x: calc( -64px * 12 )}
+}
+
+@keyframes hacman-u {
+    100% {background-position-x: calc( -64px * 12 )}
+}
+
+@-webkit-keyframes hacman-die {
+    100% {
+        background-position-x: calc( -64px * 12 );
+        opacity: .5;
+    }
+}
+
+@keyframes hacman-die {
+    100% {
+        background-position-x: calc( -64px * 12 );
+        opacity: .5;
+    }
+}
+
+/* board */
+
+.container {
+    width: 90vw;
+    height: calc(90vw / 1.451);
+    position: relative;
+}
+
+@media (min-width: 145.1vh) {
+    .container {
+        height: 90vh;
+        width: calc(90vh * 1.451);
+    }
+}
+
+.tv {
+    position: absolute;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background: url(./img/tv-border.png) no-repeat 0 0;
+    background-size: contain;
+}
+
+.screen {
+    position: absolute;
+    z-index: 900;
+    left: 8.1%;
+    top: 11%;
+    width: 65.2%;
+    height: 71%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .5)), to(transparent)),
+    -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(rgba(0, 0, 0, .33)), color-stop(rgba(0, 0, 0, .33)), color-stop(transparent), color-stop(transparent), color-stop(transparent), color-stop(transparent), color-stop(transparent), to(transparent));
+    background: -webkit-linear-gradient(rgba(0, 0, 0, .5), transparent),
+    -webkit-linear-gradient(transparent, rgba(0, 0, 0, .33), rgba(0, 0, 0, .33), transparent, transparent, transparent, transparent, transparent, transparent);
+    background: -o-linear-gradient(rgba(0, 0, 0, .5), transparent),
+    -o-linear-gradient(transparent, rgba(0, 0, 0, .33), rgba(0, 0, 0, .33), transparent, transparent, transparent, transparent, transparent, transparent);
+    background: linear-gradient(rgba(0, 0, 0, .5), transparent),
+    linear-gradient(transparent, rgba(0, 0, 0, .33), rgba(0, 0, 0, .33), transparent, transparent, transparent, transparent, transparent, transparent);
+    background-size: 100% 2px, 1200px 620px;
+    background-clip: border-box;
+    pointer-events: none;
+    -webkit-animation: flicker 2s infinite linear;
+    animation: flicker 2s infinite linear;
+}
+
+.board {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.wall {
+    background: url(./img/wall.png) repeat 0 0;
+    width: 294px;
+    height: 18px;
+    border-radius: 4px;
+    border-right: 2px solid #000;
+    position: absolute;
+    z-index: 30;
+}
+
+.food {
+    background: darkblue;
+    position: absolute;
+    z-index: 5;
+}
+
+@-webkit-keyframes flicker {
+    0% { opacity: .95; background-position: 0 0, 0 620px; }
+    10% { opacity: .9; }
+    20% { opacity: .75; }
+    30% { opacity: .9; }
+    40% { opacity: .75; }
+    50% { opacity: .9; }
+    80% { opacity: .7; }
+    90% { opacity: .92; }
+    100% { opacity: .9; background-position: 0 0, 0 0; }
+}
+
+@keyframes flicker {
+    0% { opacity: .95; background-position: 0 0, 0 620px; }
+    10% { opacity: .9; }
+    20% { opacity: .75; }
+    30% { opacity: .9; }
+    40% { opacity: .75; }
+    50% { opacity: .9; }
+    80% { opacity: .7; }
+    90% { opacity: .92; }
+    100% { opacity: .9; background-position: 0 0, 0 0; }
+}
+
+.score {
+    right: 2.4%;
+    top: 4%;
+    position: absolute;
+}
+
+.hacman,
+.ghost,
+.wall {
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-pixelated;
+    image-rendering: pixelated;
+}
